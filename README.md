@@ -1,10 +1,10 @@
 # DSL-Compilateur-Interpreteur
 
-##Model
+## Model
 
 ![Alt text](model/model.png?raw=true "Model")
 
-##Exemple d'utilisation du DSL
+## Exemple d'utilisation du DSL
 ```
 FSM mydsl
 initial in
@@ -16,7 +16,7 @@ transition t1 s1->s2 : trigger next
 transition t2 s2->fin : trigger off
 ```
 
-##Lors de la sauvergarde, ce code générera 7 classes :
+## Lors de la sauvergarde, ce code générera 7 classes :
 - Finale.java
 - Initial.java
 - main.java
@@ -25,6 +25,6 @@ transition t2 s2->fin : trigger off
 - State.java
 - mydsl.java
 
-##Exemple de fihier xmi
+## Exemple de fichier xmi
 
 ![Alt text](model/xmi.png?raw=true "XMI")
