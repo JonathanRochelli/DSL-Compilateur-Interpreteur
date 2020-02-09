@@ -2,7 +2,7 @@
 
 ## Model
 
-![Alt text](model/model.png?raw=true "Model")
+![Alt text](model/model.PNG?raw=true "Model")
 
 ## Exemple d'utilisation du DSL
 ```
@@ -27,4 +27,4 @@ transition t2 s2->fin : trigger off
 
 ## Exemple de fichier xmi
 
-![Alt text](model/xmi.png?raw=true "XMI")
+![Alt text](model/xmi.PNG?raw=true "XMI")
