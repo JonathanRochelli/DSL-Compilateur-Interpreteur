@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsm:FSM xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fsm="http://www.example.org/fsm"
+    xsi:schemaLocation="http://www.example.org/fsm fsm.ecore"
+    name="myFsm">
+  <state xsi:type="fsm:Initial"
+      name="initial"/>
+  <state xsi:type="fsm:Final"
+      name="final"/>
+  <state name="s1"/>
+  <transition
+      name="t1"
+      state="//@state.0 //@state.2"
+      trigger="on"/>
+  <transition
+      name="t2"
+      state="//@state.2 //@state.1"
+      trigger="off"/>
+</fsm:FSM>
