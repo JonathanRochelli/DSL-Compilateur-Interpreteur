@@ -17,7 +17,7 @@ public class Interpreter {
     Map<String, Object> _extensionToFactoryMap = Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap();
     XMIResourceFactoryImpl _xMIResourceFactoryImpl = new XMIResourceFactoryImpl();
     _extensionToFactoryMap.put("xmi", _xMIResourceFactoryImpl);
-    Resource resource = new ResourceSetImpl().getResource(URI.createURI("\\Users\\AdminEtu\\Documents\\workspace\\fr.ut2j.m1ice.fsm\\model\\FSM.xmi"), true);
+    Resource resource = new ResourceSetImpl().getResource(URI.createURI("\\Users\\AdminEtu\\Documents\\workspace\\DSL-Compilateur-Interpreteur\\fr.ut2j.m1ice.fsm\\model\\FSM.xmi"), true);
     EObject _get = resource.getContents().get(0);
     FSM myfsm = ((FSM) _get);
     FSMAspect.interprete(myfsm);

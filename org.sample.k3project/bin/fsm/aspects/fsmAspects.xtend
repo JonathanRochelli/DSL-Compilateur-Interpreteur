@@ -25,7 +25,7 @@ class Interpreter {
 	def static void main(String[] args) {
 		FsmPackage.eINSTANCE.class
 		Resource$Factory.Registry.INSTANCE.extensionToFactoryMap.put("xmi", new XMIResourceFactoryImpl());
-		var Resource resource = new ResourceSetImpl().getResource(URI.createURI('\\Users\\AdminEtu\\Documents\\workspace\\fr.ut2j.m1ice.fsm\\model\\FSM.xmi'), true);
+		var Resource resource = new ResourceSetImpl().getResource(URI.createURI('\\Users\\AdminEtu\\Documents\\workspace\\DSL-Compilateur-Interpreteur\\fr.ut2j.m1ice.fsm\\model\\FSM.xmi'), true);
 		var myfsm = resource.contents.get(0) as FSM
 		myfsm.interprete
 	}

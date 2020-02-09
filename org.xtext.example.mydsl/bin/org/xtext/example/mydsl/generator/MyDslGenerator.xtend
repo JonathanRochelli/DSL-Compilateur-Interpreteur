@@ -33,10 +33,16 @@ class MyDslGenerator extends AbstractGenerator {
 	
 	def createMain(FSM myfsm) 
 	'''package test;
-	import java.util.Scanner; 
-	import java.util.*;
+import java.util.Scanner; 
+import java.util.*;
+/*
+* Classe main permettant d'éxecuter le code
+*/
 public class main {
 	 
+	/*
+	* Le contenu de cette fonction dépend des informations écritent dans ls DSL
+	*/
 	public static void main (String[] args){
 		
 		«FOR s:myfsm.state»
@@ -73,6 +79,12 @@ public class main {
 
 	def instantiateState (String name) 
 	'''package test;
+/*
+* Classe état permettant de définir les états de la machine
+* @extends State
+* @attributs
+* name : nom de l'état
+*/
 public class «name» extends State{
 		
 	private String name;
@@ -89,6 +101,9 @@ public class «name» extends State{
 	
 	def createAbstractClass (String name)
 	'''package test;
+/*
+* Classe abstraite permettant de factoriser les différents états
+*/
 public abstract class «name»{
 	
 	public abstract String getName ();
@@ -98,6 +113,14 @@ public abstract class «name»{
 	
 	def publicClass (String name) 
 	'''package test;
+/*
+* Classe permettant de créer la machine à état
+* @attibuts
+* name : Nom de la machine
+* current : Etat courant
+* initial : Etat initial de la machine
+* finale : Etat final de la machine
+*/
 public class «name» { 
 		
 	private String name;
@@ -105,6 +128,9 @@ public class «name» {
 	private Initial initial;
 	private Final finale;
 	
+	/*
+	* Constructeur
+	*/
 	public «name» (String name, Initial initialState, Final finalState){
 		
 		this.name = name;
